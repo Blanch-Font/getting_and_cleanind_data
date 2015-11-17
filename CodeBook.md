@@ -10,17 +10,17 @@ The database of this project contains 7 fields:
   + STANDING
   + LAYING
 * feature: feature measured:
-  + BodyAcc: acceleration signal for body acceleration signals
-  + BodyAccJerk: BodyAcc in time to obtain Jerk signals
+  + BodyAcc: accelerometer signal
+  + BodyAccJerk: BodyAcc using Jerk signals
   + BodyAccJerkMag: BodyAccJerk using Euclidean norm
   + BodyAccMag: BodyAcc using Euclidean norm
-  + BodyBodyAccJerkMag: body linear acceleration
-  + BodyBodyGyroJerkMag: body linear acceleration
-  + BodyBodyGyroMag: body linear acceleration
-  + BodyGyro
-  + BodyGyroJerk
-  + BodyGyroJerkMag
-  + BodyGyroMag
+  + BodyBodyAccJerkMag:  using Jerk signals
+  + BodyBodyGyroJerkMag: BodyBodyAccJerkMag using Jerk signals
+  + BodyBodyGyroMag: BodyBodyAccJerkMag using Euclidean norm
+  + BodyGyro: gyroscope 3-axial signal
+  + BodyGyroJerk: BodyGyro using Jerk singals
+  + BodyGyroJerkMag: BodyGyroJerk using Euclidean norm
+  + BodyGyroMag: BodyGyro using Euclidean norm
   + GravityAcc: acceleration signal for gravity acceleration signals
   + GravityAccMag: GravityAcc using Euclidean norm
 * domain: domain type
