@@ -56,11 +56,6 @@ database_tidy$variable <- substring(database_tidy$variable,2)
 library(dplyr)
 data_final <- database_tidy %>% 
   group_by(id, labels, variable, domain, statistic, axis) %>%
-  summarise(mean_value=mean(value)) %>%
-  unite(variable2, domain, variable, sep="") %>%
-  unite(variable3, variable2, statistic, sep=".") %>%
-  mutate(axis=ifelse(axis!="", paste0(".",axis), "")) %>%
-  unite(variable, variable3, axis, sep="..") %>%
-  spread(variable, mean_value)
+  summarise(mean_value=mean(value))
 
 write.csv(x=data_final, file="data_final.txt", quote=F, row.names=F)
